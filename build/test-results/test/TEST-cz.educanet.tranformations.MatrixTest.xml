@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.educanet.tranformations.MatrixTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-01-21T10:05:37" hostname="DESKTOP-OM0U4AC" time="0.004">
+  <properties/>
+  <testcase name="testTimes" classname="cz.educanet.tranformations.MatrixTest" time="0.003"/>
+  <testcase name="getRows" classname="cz.educanet.tranformations.MatrixTest" time="0.0"/>
+  <testcase name="add" classname="cz.educanet.tranformations.MatrixTest" time="0.0"/>
+  <testcase name="get" classname="cz.educanet.tranformations.MatrixTest" time="0.0"/>
+  <testcase name="determinant" classname="cz.educanet.tranformations.MatrixTest" time="0.0"/>
+  <testcase name="times" classname="cz.educanet.tranformations.MatrixTest" time="0.0"/>
+  <testcase name="transpose" classname="cz.educanet.tranformations.MatrixTest" time="0.0"/>
+  <testcase name="getColumns" classname="cz.educanet.tranformations.MatrixTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
