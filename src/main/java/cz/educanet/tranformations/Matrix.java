@@ -62,7 +62,12 @@ public class Matrix implements IMatrix {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Matrix matrix = (Matrix) o;
-        return Arrays.equals(rawArray, matrix.rawArray);
+
+        for (int i = 0; i < rawArray.length; i++) {
+            if(!Arrays.equals(rawArray[i], matrix.rawArray[i]))
+                return false;
+        }
+        return true;
     }
 
     @Override
