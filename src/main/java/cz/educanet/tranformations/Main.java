@@ -20,5 +20,6 @@ public class Main {
 
         IMatrix matB = MatrixFactory.create(rawB);
 
+        matA.add(matB);
     }
 }
