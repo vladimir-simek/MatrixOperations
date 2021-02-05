@@ -42,7 +42,7 @@ public class Matrix implements IMatrix {
 
     @Override
     public double get(int n, int m) {
-        throw new NotImplementedError(); // TODO:
+        return rawArray[n][m];
     }
 
     //region Optional
