@@ -27,7 +27,21 @@ public class Matrix implements IMatrix {
 
     @Override
     public IMatrix times(IMatrix matrix) {
-        throw new NotImplementedError(); // TODO:
+
+        double[][] rawC = new double[getRows()][getColumns()];
+
+        for (int i = 0; i < getRows(); i++) {
+            for (int j = 0; j < getColumns(); j++) {
+                rawC[i][j] = 0;
+                for (int k = 0; k < 3; k++) {
+                    rawC[i][j] += get(i,k) * matrix.get(k,j);
+                }
+            }
+        }
+
+        IMatrix matC = MatrixFactory.create(rawC);
+
+        return matC;
     }
 
     @Override
@@ -37,9 +51,9 @@ public class Matrix implements IMatrix {
 
         for (int i = 0; i < getRows(); i++) {
             for (int j = 0; j < getColumns(); j++) {
-                int a = (int) get(i,j);
+                int a = (int) get(i, j);
 
-                rawC[i][j] = a * (int)scalar;
+                rawC[i][j] = a * (int) scalar;
             }
         }
 
@@ -56,10 +70,10 @@ public class Matrix implements IMatrix {
 
         for (int i = 0; i < getRows(); i++) {
             for (int j = 0; j < getColumns(); j++) {
-                int a = (int) get(i,j);
-                int b = (int) matrix.get(i,j);
+                int a = (int) get(i, j);
+                int b = (int) matrix.get(i, j);
 
-                rawC[i][j] = a+b;
+                rawC[i][j] = a + b;
             }
         }
 
@@ -83,6 +97,7 @@ public class Matrix implements IMatrix {
     public double determinant() {
         return 0;
     }
+
     //endregion
     //region Generated
     @Override
@@ -92,7 +107,7 @@ public class Matrix implements IMatrix {
         Matrix matrix = (Matrix) o;
 
         for (int i = 0; i < rawArray.length; i++) {
-            if(!Arrays.equals(rawArray[i], matrix.rawArray[i]))
+            if (!Arrays.equals(rawArray[i], matrix.rawArray[i]))
                 return false;
         }
         return true;

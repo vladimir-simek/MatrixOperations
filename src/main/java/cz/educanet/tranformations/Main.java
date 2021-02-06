@@ -23,6 +23,7 @@ public class Main {
         IMatrix matC = matA.add(matB);
 
         IMatrix matD = matA.times(2);
+        IMatrix matE = matA.times(matB);
 
 
         System.out.println("gey");
