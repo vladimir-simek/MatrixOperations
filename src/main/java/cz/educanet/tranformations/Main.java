@@ -20,6 +20,9 @@ public class Main {
 
         IMatrix matB = MatrixFactory.create(rawB);
 
-        matA.add(matB);
+        IMatrix matC = matA.add(matB);
+
+
+        System.out.println("gey");
     }
 }

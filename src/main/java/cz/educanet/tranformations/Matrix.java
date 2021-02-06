@@ -41,15 +41,17 @@ public class Matrix implements IMatrix {
     public IMatrix add(IMatrix matrix) {
 
         double[][] rawC = new double[getRows()][getColumns()];
-        IMatrix matC = MatrixFactory.create(rawC);
 
-        for (int i = 0; i < matrix.getRows(); i++) {
-            for (int j = 0; j < matrix.getColumns(); j++) {
+        for (int i = 0; i < getRows(); i++) {
+            for (int j = 0; j < getColumns(); j++) {
+                int a = (int) get(i,j);
+                int b = (int) matrix.get(i,j);
 
+                rawC[i][j] = a+b;
             }
         }
 
-
+        IMatrix matC = MatrixFactory.create(rawC);
 
         return matC;
     }
