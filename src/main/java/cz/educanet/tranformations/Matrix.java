@@ -32,8 +32,20 @@ public class Matrix implements IMatrix {
 
     @Override
     public IMatrix times(Number scalar) {
-        throw new NotImplementedError(); // TODO:
 
+        double[][] rawC = new double[getRows()][getColumns()];
+
+        for (int i = 0; i < getRows(); i++) {
+            for (int j = 0; j < getColumns(); j++) {
+                int a = (int) get(i,j);
+
+                rawC[i][j] = a * (int)scalar;
+            }
+        }
+
+        IMatrix matC = MatrixFactory.create(rawC);
+
+        return matC;
 
     }
 
