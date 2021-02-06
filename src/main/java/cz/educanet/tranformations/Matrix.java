@@ -1,7 +1,5 @@
 package cz.educanet.tranformations;
 
-import kotlin.NotImplementedError;
-
 import java.util.Arrays;
 
 public class Matrix implements IMatrix {
@@ -39,9 +37,7 @@ public class Matrix implements IMatrix {
             }
         }
 
-        IMatrix matC = MatrixFactory.create(rawC);
-
-        return matC;
+        return MatrixFactory.create(rawC);
     }
 
     @Override
@@ -57,9 +53,7 @@ public class Matrix implements IMatrix {
             }
         }
 
-        IMatrix matC = MatrixFactory.create(rawC);
-
-        return matC;
+        return MatrixFactory.create(rawC);
 
     }
 
@@ -77,9 +71,7 @@ public class Matrix implements IMatrix {
             }
         }
 
-        IMatrix matC = MatrixFactory.create(rawC);
-
-        return matC;
+        return MatrixFactory.create(rawC);
     }
 
     @Override

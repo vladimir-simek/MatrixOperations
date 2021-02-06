@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        double rawA[][] = {
+        double[][] rawA = {
                 {1, 2, 3,},
                 {4, 5, 6,},
                 {7, 8, 9,}
@@ -12,7 +12,7 @@ public class Main {
 
         IMatrix matA = MatrixFactory.create(rawA);
 
-        double rawB[][] = {
+        double[][] rawB = {
                 {9, 8, 7,},
                 {6, 5, 4,},
                 {3, 2, 1,}
@@ -25,6 +25,9 @@ public class Main {
         IMatrix matD = matA.times(2);
         IMatrix matE = matA.times(matB);
 
+        System.out.println(matC);
+        System.out.println(matD);
+        System.out.println(matE);
 
         System.out.println("gey");
     }
