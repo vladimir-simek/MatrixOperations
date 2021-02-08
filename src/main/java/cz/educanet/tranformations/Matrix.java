@@ -24,19 +24,19 @@ public class Matrix implements IMatrix {
     }
 
     @Override
-    public IMatrix times(IMatrix matrix) {
-
+    public IMatrix times(IMatrix matrix) throws IllegalArgumentException {
         double[][] rawC = new double[getRows()][getColumns()];
-
-        for (int i = 0; i < getRows(); i++) {
-            for (int j = 0; j < getColumns(); j++) {
-                rawC[i][j] = 0;
-                for (int k = 0; k < 3; k++) {
-                    rawC[i][j] += get(i,k) * matrix.get(k,j);
+        if (getRows() == matrix.getRows() && getColumns() == matrix.getColumns()){
+            for (int i = 0; i < getRows(); i++) {
+                for (int j = 0; j < getColumns(); j++) {
+                    rawC[i][j] = 0;
+                    for (int k = 0; k < 3; k++) {
+                        rawC[i][j] += get(i,k) * matrix.get(k,j);
+                    }
                 }
             }
-        }
 
+        }
         return MatrixFactory.create(rawC);
     }
 
